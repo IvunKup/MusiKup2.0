@@ -1,8 +1,55 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{57368392-0D94-4D88-A56D-5CA47C1755A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{74750C58-E314-46D7-9783-AB69A8CDA252}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MusiKup", "MusiKup", "{533AA3FA-662B-4CF3-8DF3-35DC0CBBE580}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{06229749-D62D-4C08-BCBB-46F54C511255}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{7AD50AB7-9B3E-473B-96BE-120F0E551024}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F578FA65-BA88-4736-A126-2611AA19BBD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusiKup.Infrastructure", "src\Services\MusiKup\Infrastructure\MusiKup.Infrastructure\MusiKup.Infrastructure.csproj", "{9D8EE123-CE9B-430D-822E-825F37F98628}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7729C118-D39F-4221-93D9-60CB29609CC0}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusiKup.Domain", "src\Services\MusiKup\Domain\MusiKup.Domain\MusiKup.Domain.csproj", "{1D09C9EA-B13C-4B33-BC41-DCDE1BC12E2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusiKup.Application", "src\Services\MusiKup\Application\MusiKup.Application\MusiKup.Application.csproj", "{E97AA486-40EB-40CA-BFA5-67B461DF273E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74750C58-E314-46D7-9783-AB69A8CDA252} = {57368392-0D94-4D88-A56D-5CA47C1755A2}
+		{533AA3FA-662B-4CF3-8DF3-35DC0CBBE580} = {74750C58-E314-46D7-9783-AB69A8CDA252}
+		{06229749-D62D-4C08-BCBB-46F54C511255} = {533AA3FA-662B-4CF3-8DF3-35DC0CBBE580}
+		{7AD50AB7-9B3E-473B-96BE-120F0E551024} = {533AA3FA-662B-4CF3-8DF3-35DC0CBBE580}
+		{F578FA65-BA88-4736-A126-2611AA19BBD1} = {533AA3FA-662B-4CF3-8DF3-35DC0CBBE580}
+		{9D8EE123-CE9B-430D-822E-825F37F98628} = {F578FA65-BA88-4736-A126-2611AA19BBD1}
+		{1D09C9EA-B13C-4B33-BC41-DCDE1BC12E2C} = {06229749-D62D-4C08-BCBB-46F54C511255}
+		{E97AA486-40EB-40CA-BFA5-67B461DF273E} = {7AD50AB7-9B3E-473B-96BE-120F0E551024}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D8EE123-CE9B-430D-822E-825F37F98628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D8EE123-CE9B-430D-822E-825F37F98628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D8EE123-CE9B-430D-822E-825F37F98628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D8EE123-CE9B-430D-822E-825F37F98628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D09C9EA-B13C-4B33-BC41-DCDE1BC12E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D09C9EA-B13C-4B33-BC41-DCDE1BC12E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D09C9EA-B13C-4B33-BC41-DCDE1BC12E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D09C9EA-B13C-4B33-BC41-DCDE1BC12E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97AA486-40EB-40CA-BFA5-67B461DF273E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97AA486-40EB-40CA-BFA5-67B461DF273E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97AA486-40EB-40CA-BFA5-67B461DF273E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97AA486-40EB-40CA-BFA5-67B461DF273E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,6 @@
+﻿services:
+  musikup.infrastructure:
+    image: musikup.infrastructure
+    build:
+      context: .
+      dockerfile: src/Services/MusiKup/Infrastructure/MusiKup.Infrastructure/Dockerfile
