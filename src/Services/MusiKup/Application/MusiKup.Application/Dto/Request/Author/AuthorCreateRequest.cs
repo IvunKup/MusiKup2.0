@@ -1,3 +1,3 @@
 ﻿namespace MusiKup.Application.Dto.Request.Author;
 
-public record AuthorCreateRequest();
+public record AuthorCreateRequest(string Nickname, FullNameDto FullName);
