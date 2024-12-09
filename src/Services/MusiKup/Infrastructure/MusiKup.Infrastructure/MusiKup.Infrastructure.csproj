@@ -32,10 +32,10 @@
 
     <ItemGroup>
         <Folder Include="Controllers\"/>
-        <Folder Include="Dal\Repositories\" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Application\MusiKup.Application\MusiKup.Application.csproj" />
       <ProjectReference Include="..\..\Domain\MusiKup.Domain\MusiKup.Domain.csproj" />
     </ItemGroup>
 
