@@ -14,7 +14,7 @@ public class AuthorController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("{id:guid}")]
+    [HttpGet]
     public async Task<ActionResult> GetByIdAsync(Guid id,
         [FromServices] AuthorService service)
     {
@@ -30,7 +30,7 @@ public class AuthorController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete("{id:guid}")]
+    [HttpDelete]
     public async Task<ActionResult> DeleteAsinc(Guid id,
         [FromServices] AuthorService service)
     {
