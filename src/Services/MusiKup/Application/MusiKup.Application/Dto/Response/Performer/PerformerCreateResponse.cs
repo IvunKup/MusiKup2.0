@@ -1,3 +1,3 @@
 ﻿namespace MusiKup.Application.Dto.Response.Performer;
 
-public record PerformerCreateResponse(Guid Id, string NickName, FullNameDto FullName);
+public record PerformerCreateResponse(string NickName, FullNameDto FullName);

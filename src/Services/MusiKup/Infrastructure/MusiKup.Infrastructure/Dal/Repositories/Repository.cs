@@ -2,18 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using MusiKup.Application.Interfases;
 using MusiKup.Domain.Entities;
-using MusiKup.Infrastructure.Dal.EntityFramework;
 
 namespace MusiKup.Infrastructure.Dal.Repositories;
 
 public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
 {
-    public readonly MusiKupContext DbContext;
-    public DbSet<TEntity> DbSet => DbContext.Set<TEntity>();
+    public DbContext _dbContext;
+    protected DbSet<TEntity> DbSet => _dbContext.Set<TEntity>();
 
-    public Repository(MusiKupContext dbContext)
+    protected Repository(DbContext dbContext)
     {
-        DbContext = dbContext;
+        _dbContext = dbContext;
     }
 
     public virtual async Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken)
@@ -24,7 +23,7 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEnti
 
     public virtual async Task<TEntity?> GetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
-        var entity = await DbSet.FindAsync([id], cancellationToken);
+        var entity = await DbSet.FindAsync(new object?[] { id }, cancellationToken: cancellationToken);
         return entity;
     }
 
@@ -58,11 +57,11 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEnti
 
     public virtual async Task SaveChangesAsync(CancellationToken cancellationToken)
     {
-        await DbContext.SaveChangesAsync(cancellationToken);
+        await _dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public virtual void SaveChanges()
     {
-        DbContext.SaveChanges();
+        _dbContext.SaveChanges();
     }
 }

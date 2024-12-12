@@ -11,28 +11,11 @@ public class TrackProfile : Profile
     {
         CreateMap<TrackCreateRequest, Track>()
             .ForMember(A => A.Title, opt => opt.MapFrom(A => A.Title));
-
         CreateMap<TrackUpdateRequest, Track>()
-            .ForMember(A => A.Id, opt => opt.MapFrom(A => A.Id))
             .ForMember(A => A.Title, opt => opt.MapFrom(A => A.Title));
-
         CreateMap<Track, TrackCreateResponse>()
-            .ForMember(A => A.Id, opt => opt.MapFrom(A => A.Id))
-            .ForMember(A => A.Title, opt => opt.MapFrom(A => A.Title))
-            .ForMember(A => A.PerformerId, opt => opt.MapFrom(A => A.PerformerId))
-            .ForMember(A => A.AuthorId, opt => opt.MapFrom(A => A.AuthorId));
-
-        CreateMap<Track, TrackGetByIdResponse>()
-            .ForMember(A => A.Title, opt => opt.MapFrom(A => A.Title))
-            .ForMember(A => A.Id, opt => opt.MapFrom(A => A.Id))
-            .ForMember(A => A.PerformerId, opt => opt.MapFrom(A => A.PerformerId))
-            .ForMember(A => A.AuthorId, opt => opt.MapFrom(A => A.AuthorId));
-
+            .ForMember(A => A.Title, opt => opt.MapFrom(A => A.Title));
         CreateMap<Track, TrackUpdateResponse>()
-            .ForMember(A => A.Id, opt => opt.MapFrom(A => A.Id))
-            .ForMember(A => A.Title, opt => opt.MapFrom(A => A.Title))
-            .ForMember(A => A.PerformerId, opt => opt.MapFrom(A => A.PerformerId))
-            .ForMember(A => A.AuthorId, opt => opt.MapFrom(A => A.AuthorId));
-
+            .ForMember(A => A.Title, opt => opt.MapFrom(A => A.Title));
     }
 }

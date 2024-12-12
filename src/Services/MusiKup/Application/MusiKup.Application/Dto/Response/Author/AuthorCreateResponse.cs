@@ -1,3 +1,3 @@
 ﻿namespace MusiKup.Application.Dto.Response.Author;
 
-public record AuthorCreateResponse(Guid Id, string NickName, FullNameDto FullName);
+public record AuthorCreateResponse(string NickName, FullNameDto FullName);
