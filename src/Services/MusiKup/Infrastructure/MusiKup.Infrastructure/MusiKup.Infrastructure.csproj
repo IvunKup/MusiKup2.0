@@ -31,10 +31,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Controllers\"/>
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\..\Application\MusiKup.Application\MusiKup.Application.csproj" />
       <ProjectReference Include="..\..\Domain\MusiKup.Domain\MusiKup.Domain.csproj" />
     </ItemGroup>
