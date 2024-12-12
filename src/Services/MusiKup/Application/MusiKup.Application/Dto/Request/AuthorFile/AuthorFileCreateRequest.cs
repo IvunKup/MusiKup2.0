@@ -1,3 +1,3 @@
 ﻿namespace MusiKup.Application.Dto.Request.AuthorFile;
 
-public record AuthorFileCreateRequest(Guid AuthorId);
+public record AuthorFileCreateRequest(Guid AuthorId, FileDataDto FileData);

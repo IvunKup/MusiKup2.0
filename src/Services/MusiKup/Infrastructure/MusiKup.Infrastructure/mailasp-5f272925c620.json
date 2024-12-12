@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mailasp",
+  "private_key_id": "5f272925c620dbb694541ade114e3659452dd20c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC/lqK0xuVxAWO8\nzXNlPlLvXfo2J/vD3e0A7vgwbQ+hYOGQEmA/1gTCjzLeGFREeiEHMcJcgDIzCP2/\nIUY3W+5aOd7nhVrk6qb0xT0+Oit3ypXTyPAPtwwDhAwEXxBCen+kjSMcj+aYeM5Q\nqOQyOMMOlH0RdyIawC3WoaOVSZmXMOkkjwaGK3FKyZf/v8PSwvA/5U/gt3qin5md\n/s9IIkf8vbzV6gvY0O7VISGzQneSbStghBUcskeefi2bxuRLlXTpl9cNl8BCsAcP\n2+PlGLBfQo3za0ayOQ9K8DnZcXTf99XNIRtPJNCmQddxfrwO0j/271YsoYFE531n\nODpRo+ODAgMBAAECggEAXQUat3HwWXcmwTbxRaFGbCCxSNUN6JHaLf9Ysk5pbd2X\ndrdtUuErC3myZWHjnCG94nvW1cmKVfwSE1fo+xzf85+wabF2KboCWMphC1L74twR\n9bNUVxT1OMnGeeLcBqLqUW8TMp1thO72oPP3Y6jqj6wpsy6n+NwBBXoSbfu/nkdS\nguhtE58auDSdiiHRAuAGaV6D/4Tfwe85aOFEKU+w02/YeiHHrqeMGiL/okwcY/7Z\nrwPVh1ASuMzz+juvsTFxFYBZVAO3t5uTVgcJst2LQl3yikW51lotipK0soVC88Gh\nkAmSj4jlEDw+4zWxMMZop494hcc141FO7X38HH2zSQKBgQDfhSYOoXI8SKF/F0NG\nMggTK+aPGpYfNhwwxDppxJv3nAl3tiODFA+sStaH9ONyAsk4l2BohOKvPf4JnTpN\n7zJP7mQ06yntXzNhphF0vChogrGGm5/d4wVCe/TimvRpwSYKYszBXMZwnVcV+LMu\n+wGeoKUrjnuP/Rv4EkKXRI6aWQKBgQDbbaRNmsLFMPQz3sjjdfG+KymSVOquuShk\nt/BfTE92pxJchz/GjsCiZDIarjjdcBvPoONfAp3Wmde0TH7av2J2X3CL2ZHVQmdp\nKymZ6Opf2HhB+M38sN8Ct/ZEGSmIWLrAA4Ehk3ACg6ek603sWuc0xNgkhHIDpt+t\nMsaAkZy5OwKBgDuILAWzjEhwE8tUt89HXg01IRg2PYucjs+SQ/iNq/i7722Z7kVo\nH3CFEjRtzfI8ubk/4CaWVgXUngeTf8boEV9mn/vUMnuNYpL8dyO/RYfoXz35zw96\n+piliSidmsFb9zTG8cACZLvzvBEXBypZIipMoRFDxrcn874TpvbBBLYpAoGBAMY4\nlrtwOdCu93vAHtO0IUy8axKA2Xw7Ua0iqOc95W73YFPr7gXtwUExqD2H82C+vLDk\n02Fp2LIbScvbaqErUMREVURQqDfxg79yuWMLEGbDA2f9Xf+Ou/cVvkcoP+em2BVL\nVSTCruXmjtQhqMQCHmkCBYt/hgucfOVWQBG2+NAvAoGBAMRhNM7zK62uArAct74n\nIZJ3JqA3fYFrf4FaIDqKlzEwDYiLJleqYOEfXYsXr0QS44pcoH7Xbm8lfHNis2tN\nDWNS6RdZLRXXZYpywipsoNjk46cnBUjo8GNhxD3FtIstOyaS82nxDMKgGuiEDxYb\n9JORQ7G7KAziBZe2pl9xtWDn\n-----END PRIVATE KEY-----\n",
+  "client_email": "lemonchef@mailasp.iam.gserviceaccount.com",
+  "client_id": "118302616395322034906",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lemonchef%40mailasp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
