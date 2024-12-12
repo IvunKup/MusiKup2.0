@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MusiKup.Application.Interfases;
+﻿using MusiKup.Application.Interfases;
 using MusiKup.Domain.Entities.Files;
+using MusiKup.Infrastructure.Dal.EntityFramework;
 
 namespace MusiKup.Infrastructure.Dal.Repositories;
 
 public class PlaylistFileRepository : Repository<PlaylistFile>, IRepository<PlaylistFile>
 {
-    protected PlaylistFileRepository(DbContext dbContext) : base(dbContext)
+    public PlaylistFileRepository(MusiKupContext dbContext) : base(dbContext)
     {
     }
 }

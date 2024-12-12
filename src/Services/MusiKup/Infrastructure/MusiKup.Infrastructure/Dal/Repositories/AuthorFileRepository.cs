@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MusiKup.Application.Interfases;
+﻿using MusiKup.Application.Interfases;
 using MusiKup.Domain.Entities.Files;
+using MusiKup.Infrastructure.Dal.EntityFramework;
 
 namespace MusiKup.Infrastructure.Dal.Repositories;
 
 public class AuthorFileRepository : Repository<AuthorFile>, IRepository<AuthorFile>
 {
-    protected AuthorFileRepository(DbContext dbContext) : base(dbContext)
+    public AuthorFileRepository(MusiKupContext dbContext) : base(dbContext)
     {
     }
 }
