@@ -29,6 +29,5 @@ public class AuthorProfile : Profile
             .ForMember(A => A.FullName.FirstName, opt => opt.MapFrom(src => src.FullName.FirstName))
             .ForMember(A => A.FullName.LastName, opt => opt.MapFrom(src => src.FullName.LastName))
             .ForMember(A => A.FullName.MiddleName, opt => opt.MapFrom(src => src.FullName.MiddleName));
-
     }
 }
