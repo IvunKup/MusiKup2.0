@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using MusiKup.Application.Dto.Request.Author;
 using MusiKup.Application.Dto.Request.AuthorFile;
 using MusiKup.Application.Dto.Response.AuthorFile;
 using MusiKup.Application.Interfases;
@@ -18,11 +17,13 @@ public class AuthorFileService
         Mapper = mapper;
     }
 
-    public async Task<AuthorFileCreateResponse> CreateAsync(AuthorCreateRequest request)
+    public async Task<AuthorFileCreateResponse> CreateAsync(AuthorFileCreateRequest request)
     {
         var author = Mapper.Map<AuthorFile>(request);
         var response = await AuthorFileRepository.AddAsync(author);
         await AuthorFileRepository.SaveChangesAsync();
+        var googleDriveId = await FileService.UploadFileAsync(request.Data);
+        author.GoogleDriveName = googleDriveId;
         return Mapper.Map<AuthorFileCreateResponse>(response);
     }
 

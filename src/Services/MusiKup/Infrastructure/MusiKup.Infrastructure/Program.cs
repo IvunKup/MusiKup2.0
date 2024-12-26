@@ -1,6 +1,9 @@
+using Google.Cloud.Storage.V1;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using MusiKup.Application.Interfases;
 using MusiKup.Application.Services;
+using MusiKup.Application.Settings;
 using MusiKup.Domain.Entities;
 using MusiKup.Infrastructure.Dal.EntityFramework;
 using MusiKup.Infrastructure.Dal.Repositories;
@@ -27,6 +30,17 @@ builder.Services.AddTransient<IRepository<Performer>, PerformerRepository>();
 builder.Services.AddTransient<IRepository<Playlist>, PlaylistRepository>();
 builder.Services.AddTransient<IRepository<Track>, TrackRepository>();
 
+builder.Services.AddTransient<StorageClient>(provider =>
+{
+    var settings = provider.GetRequiredService<IOptions<GoogleSettings>>().Value;
+
+    var googleCredential =
+        Google.Apis.Auth.OAuth2.GoogleCredential.FromFile(Path.Combine(Directory.GetCurrentDirectory(),
+            settings.FileName));
+
+    return StorageClient.Create(googleCredential);
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -42,3 +56,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

@@ -31,7 +31,7 @@ public class PerformerController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult> DeleteAsinc(Guid id,
+    public async Task<ActionResult> DeleteAsync(Guid id,
         [FromServices] PerformerService service)
     {
         await service.DeleteAsync(id);

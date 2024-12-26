@@ -31,7 +31,7 @@ public class AuthorController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult> DeleteAsinc(Guid id,
+    public async Task<ActionResult> DeleteAsync(Guid id,
         [FromServices] AuthorService service)
     {
         await service.DeleteAsync(id);

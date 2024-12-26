@@ -13,6 +13,9 @@ public class BaseFileConfiguration : IEntityTypeConfiguration<BaseFile>
         builder.Property(bf => bf.FileName)
             .HasMaxLength(100)
             .IsRequired();
+        
+        builder.Property(bf => bf.GoogleName)
+            .IsRequired();
 
         builder.Property(bf => bf.FilePath)
             .IsRequired();

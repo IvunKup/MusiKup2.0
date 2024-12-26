@@ -31,7 +31,7 @@ public class TrackController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult> DeleteAsinc(Guid id,
+    public async Task<ActionResult> DeleteAsync(Guid id,
         [FromServices] TrackService service)
     {
         await service.DeleteAsync(id);
