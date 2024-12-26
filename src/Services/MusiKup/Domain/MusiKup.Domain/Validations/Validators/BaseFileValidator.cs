@@ -11,8 +11,8 @@ public class BaseFileValidator : AbstractValidator<BaseFile>
         RuleFor(param => param.FileName)
             .NotNullOrEmptyWithMessage(nameof(BaseFile.FileName))
             .Length(1, 100).WithMessage(ExceptionMessages.InvalidLength(nameof(BaseFile.FileName)));
-        RuleFor(param => param.GoogleDriveName)
-            .NotNullOrEmptyWithMessage(nameof(BaseFile.GoogleDriveName))
-            .Must(Path.IsPathFullyQualified).WithMessage(ExceptionMessages.InvalidPath(nameof(BaseFile.GoogleDriveName)));
+        RuleFor(param => param.GoogleName)
+            .NotNullOrEmptyWithMessage(nameof(BaseFile.GoogleName))
+            .Must(Path.IsPathFullyQualified).WithMessage(ExceptionMessages.InvalidPath(nameof(BaseFile.GoogleName)));
     }
 }

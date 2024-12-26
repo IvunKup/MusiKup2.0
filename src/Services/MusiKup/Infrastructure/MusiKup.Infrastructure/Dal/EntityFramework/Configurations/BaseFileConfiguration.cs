@@ -16,7 +16,7 @@ public class BaseFileConfiguration : IEntityTypeConfiguration<BaseFile>
         builder.Property(bf => bf.GoogleName)
             .IsRequired();
 
-        builder.Property(bf => bf.GoogleDriveName)
+        builder.Property(bf => bf.GoogleName)
             .IsRequired();
 
         builder.HasDiscriminator<string>("file_discriminator")
