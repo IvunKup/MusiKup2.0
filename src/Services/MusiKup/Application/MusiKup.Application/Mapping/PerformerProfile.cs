@@ -11,23 +11,24 @@ public class PerformerProfile : Profile
     {
         CreateMap<PerformerCreateRequest, Performer>()
             .ForMember(P => P.NickName, opt => opt.MapFrom(src => src.Nickname))
-            .ForMember(P => P.FullName.FirstName, opt => opt.MapFrom(src => src.FullName.FirstName))
-            .ForMember(P => P.FullName.LastName, opt => opt.MapFrom(src => src.FullName.LastName))
-            .ForMember(P => P.FullName.MiddleName, opt => opt.MapFrom(src => src.FullName.MiddleName));
+            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName));
+
         CreateMap<PerformerUpdateRequest, Performer>()
             .ForMember(P => P.NickName, opt => opt.MapFrom(src => src.Nickname))
             .ForMember(P => P.Id, opt => opt.MapFrom(src => src.Id))
-            .ForMember(P => P.FullName.FirstName, opt => opt.MapFrom(src => src.FullName.FirstName))
-            .ForMember(P => P.FullName.LastName, opt => opt.MapFrom(src => src.FullName.LastName))
-            .ForMember(P => P.FullName.MiddleName, opt => opt.MapFrom(src => src.FullName.MiddleName));
+            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName));
+
+        CreateMap<Performer, PerformerGetByIdResponse>()
+            .ForMember(P => P.Nickname, opt => opt.MapFrom(src => src.NickName))
+            .ForMember(P => P.Id, opt => opt.MapFrom(src => src.Id))
+            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName));
+        
         CreateMap<Performer, PerformerCreateResponse>()
-            .ForMember(P => P.FullName.FirstName, opt => opt.MapFrom(src => src.FullName.FirstName))
-            .ForMember(P => P.FullName.LastName, opt => opt.MapFrom(src => src.FullName.LastName))
-            .ForMember(P => P.FullName.MiddleName, opt => opt.MapFrom(src => src.FullName.MiddleName));
+            .ForMember(P => P.Id, opt => opt.MapFrom(src => src.Id))
+            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName));
+
         CreateMap<Performer, PerformerUpdateResponse>()
             .ForMember(P => P.Id, opt => opt.MapFrom(src => src.Id))
-            .ForMember(P => P.FullName.FirstName, opt => opt.MapFrom(src => src.FullName.FirstName))
-            .ForMember(P => P.FullName.LastName, opt => opt.MapFrom(src => src.FullName.LastName))
-            .ForMember(P => P.FullName.MiddleName, opt => opt.MapFrom(src => src.FullName.MiddleName));
+            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName));
     }
 }

@@ -11,13 +11,12 @@ public class BaseFileConfiguration : IEntityTypeConfiguration<BaseFile>
         builder.HasKey(bf => bf.Id);
 
         builder.Property(bf => bf.FileName)
-            .HasMaxLength(100)
             .IsRequired();
         
         builder.Property(bf => bf.GoogleName)
             .IsRequired();
 
-        builder.Property(bf => bf.FilePath)
+        builder.Property(bf => bf.GoogleDriveName)
             .IsRequired();
 
         builder.HasDiscriminator<string>("file_discriminator")

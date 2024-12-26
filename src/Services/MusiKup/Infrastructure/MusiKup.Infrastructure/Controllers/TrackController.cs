@@ -4,6 +4,8 @@ using MusiKup.Application.Services;
 
 namespace MusiKup.Infrastructure.Controllers;
 
+[ApiController]
+[Route("/api/[controller]")]
 public class TrackController : ControllerBase
 {
     [HttpPost]
